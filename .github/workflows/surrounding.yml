@@ -1,0 +1,19 @@
+name: blank
+
+on:
+  push:
+
+jobs:
+  living:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        dash: ["faith", "tough", "bathe", "princess", "saucer"]
+        household: ["upset", "poisonous", "flu", "establishment"]
+    steps:
+    - uses: actions/checkout@v6
+    - uses: actions/setup-java@v5
+      with:
+        distribution: 'zulu'
+        java-version: '25'
+    - run: java -jar sb
